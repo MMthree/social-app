@@ -32,6 +32,7 @@ const styles = theme => ({
         textAlign: 'center',
         marginBottom: "20px",
         '& .button': {
+          boxShadow: "1px 2px 3px grey",
           cursor: "pointer",
           position: 'absolute',
           top: '185px',
@@ -114,6 +115,7 @@ class Profile extends Component {
                             hidden="hidden"
                             onChange={this.handleImageChange} 
                         />
+
                         {/* <Tooltip title="Edit Profile Picture" placement="top"> */}
                             <div onClick={this.handleEditImage} >
                                 <Chip className="button" color="primary" size="small" label="Update Image" />
