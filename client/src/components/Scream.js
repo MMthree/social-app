@@ -38,7 +38,7 @@ class Scream extends Component {
                     className={classes.image}
                 />
                 <CardContent className={classes.content}>
-                    <Typography color="primary" variant="h5" component={Link} to={`/users/${userHandle}`}>{userHandle}</Typography>
+                    <Typography color="primary" variant="h5" component={Link} to={`/users/${userHandle}`}>@{userHandle}</Typography>
                     <Typography variant="body2" color="textSecondary">{dayjs(createdAt).fromNow()}</Typography>
                     <Typography variant="body1">{body}</Typography>
                 </CardContent>

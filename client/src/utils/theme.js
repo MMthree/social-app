@@ -3,13 +3,13 @@ export default {
       primary: {
         light: "#7575dd",
         main: "#5252d4",
-        dark: "#7575dd",
+        dark: "#333386",
         contrastText: "#fff"
       },
       secondary: {
-        light: "#7575dd",
-        main: "#7575dd",
-        dark: "#b22a00",
+        light: "#34aafd",
+        main: "#1c7ef7",
+        dark: "#005eda",
         contrastText: "#fff"
       }
     },

@@ -102,6 +102,7 @@ class signup extends Component {
                             error={errors.email ? true : false}
                             value={this.state.email}
                             onChange={this.handleChange}
+                            variant="outlined"
                             fullWidth
                         ></TextField>
 
@@ -115,6 +116,7 @@ class signup extends Component {
                             error={errors.password ? true : false}
                             value={this.state.password}
                             onChange={this.handleChange}
+                            variant="outlined"
                             fullWidth
                         ></TextField>
 
@@ -128,6 +130,7 @@ class signup extends Component {
                             error={errors.confirmPassword ? true : false}
                             value={this.state.confirmPassword}
                             onChange={this.handleChange}
+                            variant="outlined"
                             fullWidth
                         ></TextField>
 
@@ -141,6 +144,7 @@ class signup extends Component {
                             error={errors.handle ? true : false}
                             value={this.state.handle}
                             onChange={this.handleChange}
+                            variant="outlined"
                             fullWidth
                         ></TextField>
 
