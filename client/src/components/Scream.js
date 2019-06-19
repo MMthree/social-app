@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { likeScream, unlikeScream } from "../redux/actions/dataActions";
 import PropTypes from "prop-types";
 import BTN from "../utils/Button";
+import DeleteScream from "./DeleteScream";
 
 // Material UI
 import Card from '@material-ui/core/Card';
@@ -20,6 +21,7 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
 const styles = {
     card: {
+        position: "relative",
         display: "flex",
         marginBottom: 20,
     },
@@ -61,7 +63,8 @@ class Scream extends Component {
                 commentCount 
             },
             user: {
-                authenticated
+                authenticated,
+                credentials: { handle }
             } 
         } = this.props;
 
@@ -80,6 +83,10 @@ class Scream extends Component {
                     <FavoriteBorder color="primary" />
                 </BTN>
         );
+
+        const deleteButton = authenticated && userHandle === handle ? (
+            <DeleteScream screamId={screamId} />
+        ) : null
         
         return (
             <Card className={classes.card}> 
@@ -90,6 +97,7 @@ class Scream extends Component {
                 />
                 <CardContent className={classes.content}>
                     <Typography color="primary" variant="h5" component={Link} to={`/users/${userHandle}`}>@{userHandle}</Typography>
+                    {deleteButton}
                     <Typography variant="body2" color="textSecondary">{dayjs(createdAt).fromNow()}</Typography>
                     <Typography variant="body1">{body}</Typography>
                     {likeButton}
