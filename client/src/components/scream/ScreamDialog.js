@@ -28,7 +28,7 @@ const styles = theme => ({
     profileImage: {
         maxWidth: 200,
         height: 200,
-        borderRadius: "5%",
+        borderRadius: "50%",
         objectFit: "cover"
     },
     dialogContent: {
@@ -129,11 +129,11 @@ class ScreamDialog extends Component {
                         {body}
                     </Typography>
                     <LikeButton screamId={screamId} />
-                    <span>{likeCount} {likeCount === 1 ? "Like" : "Likes"}</span>
+                    <small><span>{likeCount} {likeCount === 1 ? "Like" : "Likes"}</span></small>
                     <BTN tip="comments">
-                        <ChatIcon color="primary" />
+                        <ChatIcon style={{ fontSize: "20px"}} color="primary" />
                     </BTN>
-                    <span>{commentCount} {commentCount === 1 ? "Comment" : "Comments"}</span>
+                    <small><span>{commentCount} {commentCount === 1 ? "Comment" : "Comments"}</span></small>
                 </Grid>
                 <CommentForm screamId={screamId} />
                 <Comments comments={comments} /> 

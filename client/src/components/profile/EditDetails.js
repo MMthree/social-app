@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { editUserDetails } from "../../redux/actions/userActions";
 
 //Material UI
-import Fab from '@material-ui/core/Fab';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -13,7 +12,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Tooltip from "@material-ui/core/Tooltip";
-import EditIcon from "@material-ui/icons/Edit";
 
 const styles = theme => ({
     textField: {
@@ -78,9 +76,9 @@ class EditDetails extends Component {
         return (
             <Fragment>
                 <Tooltip title="Edit Details" placement="top">
-                    <Fab size="medium" color="primary" onClick={this.handleOpen} className={classes.button}>
-                        <EditIcon className={classes.edit}/>
-                    </Fab>
+                    <Button variant="outlined" color="primary" onClick={this.handleOpen} className={classes.button}>
+                        Edit Details
+                    </Button>
                 </Tooltip>
                 <Dialog
                     open={this.state.open}
@@ -123,7 +121,7 @@ class EditDetails extends Component {
                                     placeholder="Your Location"
                                     className={classes.textField}
                                     value={this.state.location}
-                                    onChange={this.onChange}
+                                    onChange={this.handleChange}
                                     variant="outlined"
                                     fullWidth
                                 />

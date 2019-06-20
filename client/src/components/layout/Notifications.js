@@ -49,7 +49,7 @@ class Notifications extends Component {
             notifications.filter(not => not.read === false).length > 0
             ? notificationIcon = (
                 <Badge badgeContent={notifications.filter(not => not.read === false).length}
-                color="error">
+                color="secondary">
                     <NotificationsIcon />
                 </Badge>
             ) : (
@@ -64,7 +64,7 @@ class Notifications extends Component {
                 notifications.map(not => {
                     const verb = not.type === "like" ? "liked" : "commented on";
                     const time = dayjs(not.createdAt).fromNow();
-                    const iconColor = not.read ? "primary" : "error";
+                    const iconColor = not.read ? "primary" : "secondary";
                     const icon = not.type === "like" ? (
                         <FavoriteIcon color={iconColor} style={{ marginRight: 10 }} />
                     ) : (

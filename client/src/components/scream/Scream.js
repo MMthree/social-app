@@ -79,11 +79,11 @@ class Scream extends Component {
                     <Typography variant="h6">{body}</Typography>
                     <hr className={classes.hiddenHR} />
                     <LikeButton screamId={screamId} />
-                    <span>{likeCount} {likeCount === 1 ? "Like" : "Likes"}</span>
+                    <small><span>{likeCount} {likeCount === 1 ? "Like" : "Likes"}</span></small>
                     <BTN tip="comments">
-                        <ChatIcon  color="primary" />
+                        <ChatIcon style={{ fontSize: "20px"}}  color="primary" />
                     </BTN>
-                    <span>{commentCount} {commentCount === 1 ? "Comment" : "Comments"}</span>
+                    <small><span>{commentCount} {commentCount === 1 ? "Comment" : "Comments"}</span></small>
                     <ScreamDialog screamId={screamId} userHandle={userHandle} openDialog={this.props.openDialog} />
                 </CardContent>
             </Card>

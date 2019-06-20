@@ -57,7 +57,6 @@ class App extends Component {
               </div>
             </Router>
           </Provider>
-
         </MuiThemeProvider>
     );
   }

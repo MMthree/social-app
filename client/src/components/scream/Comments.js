@@ -14,7 +14,7 @@ const styles = theme => ({
         maxWidth: "100%",
         height: 100,
         objectFit: "cover",
-        borderRadius: "5%"
+        borderRadius: "50%"
     },
     main: {
       padding: "0px 20px",
@@ -39,7 +39,7 @@ class Comments extends Component {
 
         const { classes, comments } = this.props;
         return(
-            <Grid container className={classes.main}>
+            <Grid container>
                 {comments.map((comment, index) => {
                     const { body, createdAt, userImage, userHandle } = comment;
                     return(

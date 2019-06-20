@@ -28,7 +28,7 @@ const styles = theme => ({
         height: 200,
         objectFit: 'cover',
         maxWidth: '100%',
-        borderRadius: '5%',
+        borderRadius: '50%',
       },
       '& .profile-details': {
         marginBottom: "20px",

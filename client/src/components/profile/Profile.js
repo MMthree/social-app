@@ -6,9 +6,12 @@ import { logoutUser, uploadImage } from "../../redux/actions/userActions";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import EditDetails from "../profile/EditDetails";
+import ProfileSkeleton from "../../utils/ProfileSkeleton";
+import BTN from "../../utils/Button";
+
 
 // Material UI
-import Fab from '@material-ui/core/Fab';
+import EditIcon from "@material-ui/icons/Edit";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import MuiLink from "@material-ui/core/Link";
@@ -17,33 +20,28 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import CalendarToday from "@material-ui/icons/CalendarToday";
 import LinkIcon from "@material-ui/icons/Link";
 import Tooltip from "@material-ui/core/Tooltip";
-import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
-import Chip from '@material-ui/core/Chip';
 
 const styles = theme => ({
     paper: {
       padding: 20
     },
     profile: {
-      '& .image-wrapper': {
-        position: "relative",
-        textAlign: 'center',
-        marginBottom: "20px",
-        '& .button': {
-          boxShadow: "1px 2px 3px grey",
-          cursor: "pointer",
-          position: 'absolute',
-          top: '185px',
-          left: "36%"
-        }
-      },
-      '& .profile-image': {
-        width: 200,
-        height: 200,
-        objectFit: 'cover',
-        maxWidth: '100%',
-        borderRadius: '5%',
-      },
+         '& .image-wrapper': {
+      textAlign: 'center',
+      position: 'relative',
+      '& button': {
+        position: 'absolute',
+        top: '80%',
+        left: '70%'
+      }
+    },
+    '& .profile-image': {
+      width: 200,
+      height: 200,
+      objectFit: 'cover',
+      maxWidth: '100%',
+      borderRadius: '50%'
+    },
       '& .profile-details': {
         marginBottom: "20px",
         textAlign: 'center',
@@ -113,12 +111,12 @@ class Profile extends Component {
                             hidden="hidden"
                             onChange={this.handleImageChange} 
                         />
-
-                        
-                            <div onClick={this.handleEditImage} >
-                                <Chip className="button" color="primary" size="small" label="Update Image" />
-                            </div>
-                        
+                        <BTN 
+                            tip="Edit Profile Picture"
+                            onClick={this.handleEditImage}
+                            btnClassName="button">
+                                <EditIcon color="primary" />
+                        </BTN>
                     </div>
                     <hr />
                     <div className="profile-details">
@@ -147,9 +145,9 @@ class Profile extends Component {
                         <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
                     </div>
                     <Tooltip title="Logout" placement="top">
-                        <Fab size="medium" color="primary" onClick={this.handleLogout} href="/login">
-                            <KeyboardReturn />
-                        </Fab>
+                        <Button variant="outlined" color="secondary" onClick={this.handleLogout} href="/login">
+                            logout
+                        </Button>
                     </Tooltip>
                     <EditDetails />
                 </div>
@@ -168,7 +166,9 @@ class Profile extends Component {
                     </Button>
                 </div>
             </Paper>
-        )) : (<p>loading...</p>)
+        )) : (
+            <ProfileSkeleton />
+        )
 
         return profileMarkup;
     }

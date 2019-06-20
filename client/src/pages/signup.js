@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import withStyles from "@material-ui/core/styles/withStyles";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import MegaPhoneIMG from "../images/megaphone.png"
+
 
 // Material UI
 import Grid from "@material-ui/core/Grid";
@@ -20,10 +22,12 @@ const styles = {
     },
     image: {
         margin: "20px auto 20px auto",
-        width: "100px"
+        width: "125px"
     },
     pageTitle: {
-        margin: "10px auto 10px auto"
+        margin: "10px auto 0px auto",
+        fontSize: 50,
+        color: "#1D2B48"
     },
     textField: {
         margin: "10px auto 10px auto"
@@ -40,7 +44,7 @@ const styles = {
         position: "absolute"
     },
     signupRedirect: {
-        color: "#5252d4",
+        color: "#3b82c6",
     }
 };
 
@@ -87,10 +91,10 @@ class signup extends Component {
             <Grid container className={classes.form}>
                 <Grid item sm />
                 <Grid item sm>
-                    <img className={classes.image} src={"https://img.icons8.com/material/480/000000/user-male.png"} alt="login icon" />
                     <Typography variant="h2" className={classes.pageTitle}>
-                        Signup
+                        ECSTATIC
                     </Typography>
+                    <img className={classes.image} src={MegaPhoneIMG} alt="login icon" />
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField 
                             id="email" 
