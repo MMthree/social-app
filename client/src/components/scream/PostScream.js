@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { connect } from "react-redux";
-import { postScream } from "../redux/actions/dataActions";
-import BTN from "../utils/Button";
+import { postScream, clearErrors } from "../../redux/actions/dataActions";
+import BTN from "../../utils/Button";
 
 //Material UI
 import Button from '@material-ui/core/Button';
@@ -17,19 +17,19 @@ import CloseIcon from "@material-ui/icons/Close";
 
 
 const styles = theme => ({
-    submitButton: {
-        position: "relative"
-    },
     progressSpinner: {
         position: "absolute"
     },
     closeButton: {
         position: "absolute",
         left: "90%",
-        top: "10%",
+        top: "4%",
     },
     submitButton: {
-        marginTop: "20px"
+        marginTop: "20px",
+        marginBottom: "10px",     
+        position: "relative",
+        float: "right"
     }
 });
 
@@ -47,8 +47,7 @@ class PostScream extends Component {
           });
         }
         if (!nextProps.UI.errors && !nextProps.UI.loading) {
-          this.setState({ body: '' });
-          this.handleClose();
+          this.setState({ body: '', open: false, errors: {}  });
         }
       }
  
@@ -57,6 +56,7 @@ class PostScream extends Component {
     };
 
     handleClose = () => {
+        this.props.clearErrors();
         this.setState({ open: false, errors: {} });
     };
 
@@ -101,6 +101,10 @@ class PostScream extends Component {
                                         onChange={this.handleChange}
                                         fullWidth
                                         variant="outlined"
+                                        placeholder="Hi, everyone!"
+                                        InputLabelProps={{
+                                            shrink: true,
+                                          }}
                                     />
                                     <Button type="submit" variant="contained" color="primary" className={classes.submitButton} disabled={loading}>
                                         Submit
@@ -118,6 +122,7 @@ class PostScream extends Component {
 
 PostScream.propTypes = {
     postScream: PropTypes.func.isRequired,
+    clearErrors: PropTypes.func.isRequired,
     UI: PropTypes.object.isRequired
 };
 
@@ -125,4 +130,4 @@ const mapStateToProps = state => ({
     UI: state.UI
 });
 
-export default connect(mapStateToProps, { postScream })(withStyles(styles)(PostScream));
+export default connect(mapStateToProps, { postScream, clearErrors })(withStyles(styles)(PostScream));

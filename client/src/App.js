@@ -6,7 +6,7 @@ import themeFile from "./utils/theme";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme"
 import jwtDecode from "jwt-decode";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import AuthRoute from "./utils/AuthRoute";
 
 // Redux

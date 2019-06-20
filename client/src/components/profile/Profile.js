@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { connect } from "react-redux";
-import { logoutUser, uploadImage } from "../redux/actions/userActions";
+import { logoutUser, uploadImage } from "../../redux/actions/userActions";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
-import EditDetails from "./EditDetails";
+import EditDetails from "../profile/EditDetails";
 
 // Material UI
 import Fab from '@material-ui/core/Fab';
@@ -16,8 +16,6 @@ import Typography from "@material-ui/core/Typography";
 import LocationOn from "@material-ui/icons/LocationOn";
 import CalendarToday from "@material-ui/icons/CalendarToday";
 import LinkIcon from "@material-ui/icons/Link";
-import IconButton from "@material-ui/core/IconButton";
-import EditIcon from "@material-ui/icons/Edit";
 import Tooltip from "@material-ui/core/Tooltip";
 import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
 import Chip from '@material-ui/core/Chip';
