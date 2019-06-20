@@ -114,11 +114,11 @@ class Profile extends Component {
                             onChange={this.handleImageChange} 
                         />
 
-                        {/* <Tooltip title="Edit Profile Picture" placement="top"> */}
+                        
                             <div onClick={this.handleEditImage} >
                                 <Chip className="button" color="primary" size="small" label="Update Image" />
                             </div>
-                        {/* </Tooltip> */}
+                        
                     </div>
                     <hr />
                     <div className="profile-details">

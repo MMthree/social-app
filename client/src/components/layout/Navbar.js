@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import BTN from "../../utils/Button";
 import PostScream from "../scream/PostScream";
+import Notifications from "./Notifications";
 
 // MUI
 import AppBar from "@material-ui/core/AppBar";
@@ -11,7 +12,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 
 import HomeIcon from "@material-ui/icons/Home";
-import Notifications from "@material-ui/icons/Notifications";
+// import Notifications from "@material-ui/icons/Notifications";
 
 class Navbar extends Component {
     render() {
@@ -27,9 +28,7 @@ class Navbar extends Component {
                                     <HomeIcon />
                                 </BTN>
                             </Link>
-                            <BTN tip="Notifications">
                                 <Notifications />
-                            </BTN>
                         </Fragment>
                     ) : (
                         <Fragment>

@@ -27,7 +27,6 @@ export class home extends Component {
                     {recentScreams}
                 </Grid>
             </Grid>
-
         )
     }
 }
