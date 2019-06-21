@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.2.0",
     "axios": "^0.19.0",
     "dayjs": "^1.8.14",
+    "gh-pages": "^2.0.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -16,11 +17,13 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
+  "homepage": "https://mmthree.github.io/socialapp",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
