@@ -128,12 +128,7 @@ class ScreamDialog extends Component {
                     <Typography variant="h6">
                         {body}
                     </Typography>
-                    <LikeButton screamId={screamId} />
-                    <small><span>{likeCount} {likeCount === 1 ? "Like" : "Likes"}</span></small>
-                    <BTN tip="comments">
-                        <ChatIcon style={{ fontSize: "20px"}} color="primary" />
-                    </BTN>
-                    <small><span>{commentCount} {commentCount === 1 ? "Comment" : "Comments"}</span></small>
+                    
                 </Grid>
                 <CommentForm screamId={screamId} />
                 <Comments comments={comments} /> 

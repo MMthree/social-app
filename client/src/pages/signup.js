@@ -94,7 +94,7 @@ class signup extends Component {
                     <Typography variant="h2" className={classes.pageTitle}>
                         ECSTATIC
                     </Typography>
-                    <img className={classes.image} src={MegaPhoneIMG} alt="login icon" />
+                    <img className={classes.image} src={"https://firebasestorage.googleapis.com/v0/b/socialapi-e127d.appspot.com/o/megaphone.png?alt=media"} alt="login icon" />
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField 
                             id="email" 
@@ -187,7 +187,7 @@ signup.propTypes = {
     classes: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
     UI: PropTypes.object.isRequired,
-    logoutUser: PropTypes.func.isRequired
+    signupUser: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({

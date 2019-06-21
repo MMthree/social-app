@@ -39,7 +39,7 @@ class Comments extends Component {
 
         const { classes, comments } = this.props;
         return(
-            <Grid container>
+            <Grid container className={classes.main}>
                 {comments.map((comment, index) => {
                     const { body, createdAt, userImage, userHandle } = comment;
                     return(

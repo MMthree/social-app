@@ -85,7 +85,7 @@ const  ProfileSkeleton = props => {
         <Paper className={classes.paper}>
             <div className={classes.profile}>
                 <div className="image-wrapper">
-                    <img src={NoImg} alt="profile" className="profile-image"/>
+                    <img src={"https://firebasestorage.googleapis.com/v0/b/socialapi-e127d.appspot.com/o/no-image.png?alt=media"} alt="profile" className="profile-image"/>
                 </div>
                 <hr />
                 <div className="profile-details">

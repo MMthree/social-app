@@ -69,29 +69,29 @@ export const postScream = (newScream) => (dispatch) => {
   };
 
 // Like a scream
-export const likeScream = screamId => dispatch => {
-    axios.get(`/scream/${screamId}/like`)
-    .then(res => {
+export const likeScream = (screamId) => (dispatch) => {
+    axios
+      .get(`/scream/${screamId}/like`)
+      .then((res) => {
         dispatch({
-            type: LIKE_SCREAM,
-            payload: res.data
-        })
-    })
-    .catch(err => console.log(err));
-};
-
-
-// Unlike a scream
-export const unlikeScream = screamId => dispatch => {
-    axios.get(`/scream/${screamId}/unlike`)
-    .then(res => {
+          type: LIKE_SCREAM,
+          payload: res.data
+        });
+      })
+      .catch((err) => console.log(err));
+  };
+  // Unlike a scream
+  export const unlikeScream = (screamId) => (dispatch) => {
+    axios
+      .get(`/scream/${screamId}/unlike`)
+      .then((res) => {
         dispatch({
-            type: UNLIKE_SCREAM,
-            payload: res.data
-        })
-    })
-    .catch(err => console.log(err));
-};
+          type: UNLIKE_SCREAM,
+          payload: res.data
+        });
+      })
+      .catch((err) => console.log(err));
+  };
 
 // Submit a comment
 export const submitComment = (screamId, commentData) => dispatch => {

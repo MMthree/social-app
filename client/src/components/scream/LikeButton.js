@@ -61,11 +61,6 @@ class LikeButton extends Component {
                 
             </Fragment>
             
-            // <Link to="/login">
-            //     <BTN tip="Like">
-            //         <FavoriteBorder  style={{ fontSize: "20px"}} color="primary" />
-            //     </BTN>
-            // </Link>
         ) : this.likedScream() ? (
                 <BTN tip="Undo Like" onClick={this.unlikeScream}>
                     <FavoriteIcon  style={{ fontSize: "20px"}} color="secondary" />
