@@ -17,7 +17,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://mmthree.github.io/socialapp",
+  "homepage": "https://mmthree.github.io/social-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
