@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/social-app/static/css/main.8bbda34a.chunk.css",
-    "main.js": "/social-app/static/js/main.0cbb747a.chunk.js",
-    "main.js.map": "/social-app/static/js/main.0cbb747a.chunk.js.map",
+    "main.css": "/social-app/static/css/main.130b6c27.chunk.css",
+    "main.js": "/social-app/static/js/main.ede91ea1.chunk.js",
+    "main.js.map": "/social-app/static/js/main.ede91ea1.chunk.js.map",
     "runtime~main.js": "/social-app/static/js/runtime~main.acab5ee4.js",
     "runtime~main.js.map": "/social-app/static/js/runtime~main.acab5ee4.js.map",
-    "static/js/2.bf2093cc.chunk.js": "/social-app/static/js/2.bf2093cc.chunk.js",
-    "static/js/2.bf2093cc.chunk.js.map": "/social-app/static/js/2.bf2093cc.chunk.js.map",
+    "static/js/2.08d1e5bb.chunk.js": "/social-app/static/js/2.08d1e5bb.chunk.js",
+    "static/js/2.08d1e5bb.chunk.js.map": "/social-app/static/js/2.08d1e5bb.chunk.js.map",
     "index.html": "/social-app/index.html",
-    "precache-manifest.a3346ff6bfd5c37d5cc828c14976e2b6.js": "/social-app/precache-manifest.a3346ff6bfd5c37d5cc828c14976e2b6.js",
+    "precache-manifest.2cd35f0878cf36cce30fc76519c6e48f.js": "/social-app/precache-manifest.2cd35f0878cf36cce30fc76519c6e48f.js",
     "service-worker.js": "/social-app/service-worker.js",
-    "static/css/main.8bbda34a.chunk.css.map": "/social-app/static/css/main.8bbda34a.chunk.css.map",
-    "static/media/megaphone.png": "/social-app/static/media/megaphone.039376ae.png",
-    "static/media/no-img.png": "/social-app/static/media/no-img.6732bd42.png"
+    "static/css/main.130b6c27.chunk.css.map": "/social-app/static/css/main.130b6c27.chunk.css.map"
   }
 }
