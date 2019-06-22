@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 import './App.css';
@@ -44,22 +44,31 @@ if (token) {
 class App extends Component {
   render() {
       return (
-        <MuiThemeProvider theme={theme}>
-          <Provider store={store}>
-            <Router>
-              <Navbar />
-              <div className="container">
-                <Switch>
-                  <Route exact path="/" component={home} />
-                  <AuthRoute exact path="/login" component={login} />
-                  <AuthRoute exact path="/signup" component={signup} />
-                  <Route exact path="/users/:handle" component={user} />
-                  <Route exact path="/users/:handle/scream/:screamId" component={user} />
-                </Switch>
-              </div>
-            </Router>
-          </Provider>
-        </MuiThemeProvider>
+        <Fragment>
+          <MuiThemeProvider theme={theme}>
+            <Provider store={store}>
+              <Router>
+                <Navbar />
+                <div className="container">
+                  <Switch>
+                    <Route exact path="/" component={home} />
+                    <AuthRoute exact path="/login" component={login} />
+                    <AuthRoute exact path="/signup" component={signup} />
+                    <Route exact path="/users/:handle" component={user} />
+                    <Route exact path="/users/:handle/scream/:screamId" component={user} />
+                  </Switch>
+                </div>
+              </Router>
+            </Provider>
+          </MuiThemeProvider>
+
+          <footer className="footer">
+            <div className="container">
+                <span><a href="https://github.com/MMthree" target="__blank" className="text-muted">GitHub@MMthree <i className="fab fa-github"></i></a></span>
+            </div>
+          </footer>
+        </Fragment>
+        
     );
   }
 }

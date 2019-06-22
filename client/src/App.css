@@ -22,3 +22,13 @@ a {
 .nav-container svg {
   color: #fff;
 }
+
+.footer {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+.text-muted {
+  color: darkslategray;
+}

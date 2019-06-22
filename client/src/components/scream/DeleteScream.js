@@ -50,7 +50,7 @@ class DeleteScream extends Component {
                 onClick={this.handleOpen}
                 btnClassName={classes.deleteButton}
                 >
-                    <DeleteOutline color="secondary" />
+                    <DeleteOutline color="action" />
                 </BTN>
                 <Dialog 
                     open={this.state.open}

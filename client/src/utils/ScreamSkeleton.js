@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import NoImg from "../images/no-img.png";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 
@@ -53,7 +52,7 @@ const ScreamSkeleton = props => {
 
     const content = Array.from({ length: 5 }).map((item, index) => (
         <Card className={classes.card} key={index}>
-            <CardMedia className={classes.cover} image={NoImg} />
+            <CardMedia className={classes.cover} image={"https://firebasestorage.googleapis.com/v0/b/socialapi-e127d.appspot.com/o/no-image.png?alt=media"} />
             <CardContent className={classes.cardContent}>
                 <div className={classes.handle}/>
                 <div className={classes.date}/>
